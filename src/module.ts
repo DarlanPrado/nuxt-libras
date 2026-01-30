@@ -1,19 +1,27 @@
-import { defineNuxtModule, addPlugin, createResolver } from '@nuxt/kit'
+import { defineNuxtModule, addPlugin, createResolver, addComponentsDir } from '@nuxt/kit'
+import { name, version } from '../package.json'
 
-// Module options TypeScript interface definition
-export interface ModuleOptions {}
-
-export default defineNuxtModule<ModuleOptions>({
+export default defineNuxtModule({
   meta: {
-    name: 'my-module',
-    configKey: 'myModule',
+    name,
+    version,
+    configKey: name,
+    compatibility: {
+      nuxt: '>=3.0.0',
+    },
   },
-  // Default configuration options of the Nuxt module
+
   defaults: {},
   setup(_options, _nuxt) {
-    const resolver = createResolver(import.meta.url)
+    const { resolve } = createResolver(import.meta.url)
 
-    // Do not add the extension since the `.ts` will be transpiled to `.mjs` after `npm run prepack`
-    addPlugin(resolver.resolve('./runtime/plugin'))
+    console.log('Nuxt Libras Module loaded')
+
+    addComponentsDir({
+      path: resolve('./runtime/components'),
+      global: true,
+    })
+
+    addPlugin(resolve('./runtime/plugins/vlibras.ts'))
   },
 })
