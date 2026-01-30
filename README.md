@@ -7,35 +7,48 @@ Find and replace all on all files (CMD+SHIFT+F):
 - Description: My new Nuxt module
 -->
 
-# My Module
+# Nuxt VLibras
 
-[![npm version][npm-version-src]][npm-version-href]
+
+<!-- [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
-[![Nuxt][nuxt-src]][nuxt-href]
+[![Nuxt][nuxt-src]][nuxt-href] -->
 
-My new Nuxt module for doing amazing things.
+This module allows you to easily integrate Vlibras, a translation tool designed to provide accessibility for deaf people, into your application. It enables users to visualize the application's text in sign language.
 
-- [✨ &nbsp;Release Notes](/CHANGELOG.md)
+<!-- - [✨ &nbsp;Release Notes](/CHANGELOG.md) -->
 <!-- - [🏀 Online playground](https://stackblitz.com/github/your-org/my-module?file=playground%2Fapp.vue) -->
 <!-- - [📖 &nbsp;Documentation](https://example.com) -->
 
-## Features
+<!-- ## Features
 
 <!-- Highlight some of the features your module provide here -->
-- ⛰ &nbsp;Foo
+<!-- - ⛰ &nbsp;Foo
 - 🚠 &nbsp;Bar
-- 🌲 &nbsp;Baz
+- 🌲 &nbsp;Baz -->
 
 ## Quick Setup
 
 Install the module to your Nuxt application with one command:
 
 ```bash
-npx nuxt module add my-module
+npx nuxt module add nuxt-libras
 ```
 
-That's it! You can now use My Module in your Nuxt app ✨
+You need to add the VLibras component to your app.vue file.
+
+```bash
+<template>
+  <div>
+    <p>My Nuxt Application</p>
+    <VLibras />
+  </div>
+</template>
+
+```
+
+Now you just need to access your application to see how vlibras works.✨
 
 
 ## Contribution
@@ -45,33 +58,33 @@ That's it! You can now use My Module in your Nuxt app ✨
   
   ```bash
   # Install dependencies
-  npm install
+  pnpm install
   
   # Generate type stubs
-  npm run dev:prepare
+  pnpm run dev:prepare
   
   # Develop with the playground
-  npm run dev
+  pnpm run dev
   
   # Build the playground
-  npm run dev:build
+  pnpm run dev:build
   
   # Run ESLint
-  npm run lint
+  pnpm run lint
   
   # Run Vitest
-  npm run test
-  npm run test:watch
+  pnpm run test
+  pnpm run test:watch
   
   # Release new version
-  npm run release
+  pnpm run release
   ```
 
 </details>
 
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=020420&colorB=00DC82
+<!-- [npm-version-src]: https://img.shields.io/npm/v/my-module/latest.svg?style=flat&colorA=020420&colorB=00DC82
 [npm-version-href]: https://npmjs.com/package/my-module
 
 [npm-downloads-src]: https://img.shields.io/npm/dm/my-module.svg?style=flat&colorA=020420&colorB=00DC82
@@ -81,4 +94,4 @@ That's it! You can now use My Module in your Nuxt app ✨
 [license-href]: https://npmjs.com/package/my-module
 
 [nuxt-src]: https://img.shields.io/badge/Nuxt-020420?logo=nuxt
-[nuxt-href]: https://nuxt.com
+[nuxt-href]: https://nuxt.com -->

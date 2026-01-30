@@ -1,8 +1,7 @@
 {
   "name": "nuxt-libras",
   "version": "1.0.0",
-  "description": "My new Nuxt module",
-  "repository": "your-org/my-module",
+  "description": "Vlibras is a Nuxt module to integrate the VLibras accessibility tool into your Nuxt applications.",
   "license": "MIT",
   "type": "module",
   "exports": {
