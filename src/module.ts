@@ -22,6 +22,6 @@ export default defineNuxtModule({
       global: true,
     })
 
-    addPlugin(resolve('./runtime/plugins/vlibras.ts'))
+    addPlugin(resolve('./runtime/plugins/vlibras'))
   },
 })
